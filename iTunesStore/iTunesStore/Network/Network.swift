@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Alamofire
 
 enum APIError: Error {
     case invalidURL
@@ -18,7 +19,7 @@ enum APIError: Error {
 class Network {
     
     static let shared = Network()
-    
+
     func fetchSearchAppData(term: String) -> Observable<SearchModel> {
         
         return Observable<SearchModel>.create { observer in
@@ -64,5 +65,70 @@ class Network {
             
             return Disposables.create()
         }
+    }
+    
+    // without Single
+    func fetchAppDataAlamofire(
+        term: String
+    ) -> Observable<SearchModel> {
+        return Observable<SearchModel>.create { observer in
+            let baseUrl = "https://itunes.ap메롱ple.com/search?country=KR&media=software&term="
+            AF
+                .request(URL(string: "\(baseUrl)\(term)")!)
+                .validate(statusCode: 200..<300)
+                .responseDecodable(of: SearchModel.self) { response in
+                    switch response.result {
+                    case .success(let success):
+                        observer.onNext(success)
+                        observer.onCompleted()
+                    case .failure(let failure):
+                        observer.onError(failure)
+                    }
+                }
+            return Disposables.create()
+        }.debug()
+    }
+
+    // with Single
+    func fetchAppDataWithSingle(term: String) -> Single<SearchModel> {
+        return Single.create { single in
+            let baseUrl = "https://itunes.ap메롱ple.com/search?country=KR&media=software&term="
+            AF
+                .request(URL(string: "\(baseUrl)\(term)")!)
+                .validate(statusCode: 200..<300)
+                .responseDecodable(of: SearchModel.self) { response in
+                    switch response.result {
+                    case .success(let success):
+                        single(.success(success))
+                    case .failure(let failure):
+                        single(.failure(failure))
+                    }
+                }
+            return Disposables.create()
+        }.debug()
+    }
+    
+    // with Single + Result Type
+    func fetchAppdataWithSingleResult(
+        term: String
+    ) -> Single<Result<SearchModel, APIError>> {
+        return Single.create { single -> Disposable in
+            
+            let baseUrl = "https://itunes.apple.com/search?country=KR&media=software&term="
+            AF
+                .request(URL(string: "\(baseUrl)\(term)")!)
+                .validate(statusCode: 200..<300)
+                .responseDecodable(of: SearchModel.self) { response in
+                    switch response.result {
+                    case .success(let success):
+                        single(.success(.success(success)))
+                    case .failure(let failure):
+                        single(.success(.failure(APIError.invalidURL)))
+                    }
+                }
+            
+            
+            return Disposables.create()
+        }.debug("Observalbe Search")
     }
 }

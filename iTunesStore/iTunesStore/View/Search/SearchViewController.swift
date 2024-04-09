@@ -12,7 +12,8 @@ import RxCocoa
 final class SearchViewController: BaseViewController {
 
     let mainView = SearchView()
-    let viewModel = SearchViewModel()
+    let searchViewModel = SearchViewModel()
+    let searchBookmarkViewModel = SearchBookmarkViewModel()
     let disposeBag = DisposeBag()
 
     override func loadView() {
@@ -24,18 +25,10 @@ final class SearchViewController: BaseViewController {
     }
 
     override func setNavigation() {
+        super.setNavigation()
+        
         navigationItem.title = "검색"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
-        
-        let backBarButtonItem = UIBarButtonItem(
-            title: nil,
-            style: .plain,
-            target: self,
-            action: nil
-        )
-        
-        navigationItem.backBarButtonItem = backBarButtonItem
     }
     override func bind() {
 
@@ -43,14 +36,22 @@ final class SearchViewController: BaseViewController {
             searchTap: mainView.searchBar.rx.searchButtonClicked,
             searchText: mainView.searchBar.rx.text
         )
-        let output = viewModel.transform(input: input)
+        let output = searchViewModel.transform(input: input)
         
         output.apps
             .bind(to: mainView.tableView.rx.items(
                 cellIdentifier: SearchTableViewCell.identifier,
                 cellType: SearchTableViewCell.self)
             ) { (row, element, cell) in
+                
+                let input = SearchBookmarkViewModel.Input(
+                    bookmarkTap: cell.downloadButton.rx.tap
+                    )
+                
+                
+                
                 cell.updateUI(element: element)
+                
             }
             .disposed(by: disposeBag)
         

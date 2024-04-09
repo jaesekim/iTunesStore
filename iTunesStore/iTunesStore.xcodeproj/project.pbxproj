@@ -29,6 +29,17 @@
 		7BE31BA82BC313FF00D1EDE6 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE31BA72BC313FE00D1EDE6 /* SearchModel.swift */; };
 		7BE31BAE2BC31B4B00D1EDE6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7BE31BAD2BC31B4B00D1EDE6 /* Kingfisher */; };
 		7BE31BB12BC3258100D1EDE6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 7BE31BB02BC3258100D1EDE6 /* Then */; };
+		7BE31BB52BC3396800D1EDE6 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 7BE31BB42BC3396800D1EDE6 /* Toast */; };
+		7BE31BB72BC339CA00D1EDE6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE31BB62BC339C900D1EDE6 /* TabBarViewController.swift */; };
+		7BE31BBA2BC33A1B00D1EDE6 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE31BB92BC33A1B00D1EDE6 /* BookmarkViewController.swift */; };
+		7BE31BBC2BC33A3900D1EDE6 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE31BBB2BC33A3800D1EDE6 /* BookmarkView.swift */; };
+		7BE31BC02BC33D8A00D1EDE6 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE31BBF2BC33D8A00D1EDE6 /* BookmarkCollectionViewCell.swift */; };
+		7BE31BC22BC33DE800D1EDE6 /* BookmarkTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE31BC12BC33DE800D1EDE6 /* BookmarkTable.swift */; };
+		7BE31BC52BC33E3200D1EDE6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7BE31BC42BC33E3200D1EDE6 /* Realm */; };
+		7BE31BC72BC33E3200D1EDE6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7BE31BC62BC33E3200D1EDE6 /* RealmSwift */; };
+		7BE31BC92BC33EDF00D1EDE6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE31BC82BC33EDF00D1EDE6 /* Repository.swift */; };
+		7BE31BCB2BC3423100D1EDE6 /* SearchBookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE31BCA2BC3423100D1EDE6 /* SearchBookmarkViewModel.swift */; };
+		7BE31BE72BC44F0900D1EDE6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7BE31BE62BC44F0900D1EDE6 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +62,13 @@
 		7BE31BA32BC30E1A00D1EDE6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		7BE31BA52BC3104B00D1EDE6 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		7BE31BA72BC313FE00D1EDE6 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		7BE31BB62BC339C900D1EDE6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7BE31BB92BC33A1B00D1EDE6 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		7BE31BBB2BC33A3800D1EDE6 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+		7BE31BBF2BC33D8A00D1EDE6 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
+		7BE31BC12BC33DE800D1EDE6 /* BookmarkTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTable.swift; sourceTree = "<group>"; };
+		7BE31BC82BC33EDF00D1EDE6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		7BE31BCA2BC3423100D1EDE6 /* SearchBookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookmarkViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BE31BE72BC44F0900D1EDE6 /* Alamofire in Frameworks */,
+				7BE31BC72BC33E3200D1EDE6 /* RealmSwift in Frameworks */,
+				7BE31BC52BC33E3200D1EDE6 /* Realm in Frameworks */,
+				7BE31BB52BC3396800D1EDE6 /* Toast in Frameworks */,
 				7BE31BB12BC3258100D1EDE6 /* Then in Frameworks */,
 				7BE31BAE2BC31B4B00D1EDE6 /* Kingfisher in Frameworks */,
 				7BE31B872BC3082B00D1EDE6 /* SnapKit in Frameworks */,
@@ -118,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				7BE31B902BC3092200D1EDE6 /* Base */,
+				7BE31BBE2BC33C3F00D1EDE6 /* TabBar */,
+				7BE31BB82BC33A0500D1EDE6 /* Bookmark */,
 				7BE31B9A2BC30CF300D1EDE6 /* Detail */,
 				7BE31B882BC3087B00D1EDE6 /* Search */,
 			);
@@ -127,6 +151,7 @@
 		7BE31B8A2BC3089400D1EDE6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7BE31BBD2BC33BB700D1EDE6 /* Bookmark */,
 				7BE31BA22BC30E0F00D1EDE6 /* Detail */,
 				7BE31B992BC30C8C00D1EDE6 /* Search */,
 			);
@@ -162,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				7BE31B972BC30C8800D1EDE6 /* SearchViewModel.swift */,
+				7BE31BCA2BC3423100D1EDE6 /* SearchBookmarkViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -186,8 +212,35 @@
 		7BE31BB22BC3374200D1EDE6 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				7BE31BC12BC33DE800D1EDE6 /* BookmarkTable.swift */,
+				7BE31BC82BC33EDF00D1EDE6 /* Repository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		7BE31BB82BC33A0500D1EDE6 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				7BE31BB92BC33A1B00D1EDE6 /* BookmarkViewController.swift */,
+				7BE31BBB2BC33A3800D1EDE6 /* BookmarkView.swift */,
+				7BE31BBF2BC33D8A00D1EDE6 /* BookmarkCollectionViewCell.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		7BE31BBD2BC33BB700D1EDE6 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		7BE31BBE2BC33C3F00D1EDE6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7BE31BB62BC339C900D1EDE6 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +265,10 @@
 				7BE31B862BC3082B00D1EDE6 /* SnapKit */,
 				7BE31BAD2BC31B4B00D1EDE6 /* Kingfisher */,
 				7BE31BB02BC3258100D1EDE6 /* Then */,
+				7BE31BB42BC3396800D1EDE6 /* Toast */,
+				7BE31BC42BC33E3200D1EDE6 /* Realm */,
+				7BE31BC62BC33E3200D1EDE6 /* RealmSwift */,
+				7BE31BE62BC44F0900D1EDE6 /* Alamofire */,
 			);
 			productName = iTunesStore;
 			productReference = 7BE31B692BC307FC00D1EDE6 /* iTunesStore.app */;
@@ -246,6 +303,9 @@
 				7BE31B852BC3082B00D1EDE6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				7BE31BAC2BC31B4B00D1EDE6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				7BE31BAF2BC3258100D1EDE6 /* XCRemoteSwiftPackageReference "Then" */,
+				7BE31BB32BC3396800D1EDE6 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				7BE31BC32BC33E3200D1EDE6 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				7BE31BE52BC44F0900D1EDE6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 7BE31B6A2BC307FC00D1EDE6 /* Products */;
 			projectDirPath = "";
@@ -280,13 +340,20 @@
 				7BE31B712BC307FC00D1EDE6 /* ViewController.swift in Sources */,
 				7BE31B9E2BC30D1E00D1EDE6 /* DetailView.swift in Sources */,
 				7BE31B982BC30C8800D1EDE6 /* SearchViewModel.swift in Sources */,
+				7BE31BCB2BC3423100D1EDE6 /* SearchBookmarkViewModel.swift in Sources */,
 				7BE31B6D2BC307FC00D1EDE6 /* AppDelegate.swift in Sources */,
+				7BE31BC92BC33EDF00D1EDE6 /* Repository.swift in Sources */,
 				7BE31BA62BC3104B00D1EDE6 /* Network.swift in Sources */,
 				7BE31BA42BC30E1A00D1EDE6 /* DetailViewModel.swift in Sources */,
 				7BE31B922BC3092D00D1EDE6 /* BaseView.swift in Sources */,
+				7BE31BBC2BC33A3900D1EDE6 /* BookmarkView.swift in Sources */,
 				7BE31B8D2BC3090800D1EDE6 /* SearchViewController.swift in Sources */,
 				7BE31BA82BC313FF00D1EDE6 /* SearchModel.swift in Sources */,
+				7BE31BC22BC33DE800D1EDE6 /* BookmarkTable.swift in Sources */,
+				7BE31BBA2BC33A1B00D1EDE6 /* BookmarkViewController.swift in Sources */,
+				7BE31BC02BC33D8A00D1EDE6 /* BookmarkCollectionViewCell.swift in Sources */,
 				7BE31B6F2BC307FC00D1EDE6 /* SceneDelegate.swift in Sources */,
+				7BE31BB72BC339CA00D1EDE6 /* TabBarViewController.swift in Sources */,
 				7BE31B942BC30BFF00D1EDE6 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +609,30 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		7BE31BB32BC3396800D1EDE6 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		7BE31BC32BC33E3200D1EDE6 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		7BE31BE52BC44F0900D1EDE6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -569,6 +660,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7BE31BAF2BC3258100D1EDE6 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		7BE31BB42BC3396800D1EDE6 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BE31BB32BC3396800D1EDE6 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		7BE31BC42BC33E3200D1EDE6 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BE31BC32BC33E3200D1EDE6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		7BE31BC62BC33E3200D1EDE6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BE31BC32BC33E3200D1EDE6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		7BE31BE62BC44F0900D1EDE6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BE31BE52BC44F0900D1EDE6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

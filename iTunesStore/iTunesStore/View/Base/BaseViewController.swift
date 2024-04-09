@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast
 
 class BaseViewController: UIViewController {
     
@@ -16,6 +17,18 @@ class BaseViewController: UIViewController {
         bind()
     }
     
-    func setNavigation() {}
+    func setNavigation() {
+        let backBarButtonItem = UIBarButtonItem(
+            title: nil,
+            style: .plain,
+            target: self,
+            action: nil
+        )
+        
+        navigationItem.backBarButtonItem = backBarButtonItem
+    }
     func bind() {}
+    func showToast(_ message: String) {
+        view.makeToast(message)
+    }
 }

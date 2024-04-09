@@ -34,7 +34,8 @@ class SearchViewModel {
                 print(value)
                 return String(value) }
             .flatMap {
-                Network.shared.fetchSearchAppData(term: $0)
+//                Network.shared.fetchSearchAppData(term: $0)
+                Network.shared.fetchAppDataAlamofire(term: $0)
             }
             .debug()
             .subscribe(with: self) { owner, value in
